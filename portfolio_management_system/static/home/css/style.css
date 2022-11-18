@@ -338,7 +338,7 @@ body .theme-button:hover span {opacity: 1;}
   animation: menu_sticky 0.7s ease-in-out;
 }
 .theme-main-menu.fixed.full-width {padding: 10px 80px;}
-/*----------------------- Theme Banner One -------------------------*/
+/* ----------------------- Theme Banner One -------------------------
 .theme-banner-one {
   background: url(../images/home/bg1.png) no-repeat center;
   background-size: cover;
@@ -457,7 +457,7 @@ body .theme-button:hover span {opacity: 1;}
   border-bottom: none;
   border-radius: 85% 0 0 0;
   animation: border-two 2s ease-in-out alternate infinite;
-}
+} */
 /*----------------------- Theme Banner Two ----------------*/
 .theme-banner-two .main-text-wrapper {padding: 305px 0 245px;}
 .theme-banner-two .partner-slider .item img {opacity: 0.2;}

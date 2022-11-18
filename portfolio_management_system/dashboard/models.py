@@ -4,8 +4,9 @@ from django.db.models import JSONField
 
 class Portfolio(models.Model):
   user = models.OneToOneField(User, on_delete=models.CASCADE)
+  portfolio_name = models.CharField(max_length=100)
   total_investment = models.FloatField(default=0)
-
+ 
   def update_investment(self):
     investment = 0
     holdings = StockHolding.objects.filter(portfolio=self)
@@ -15,11 +16,12 @@ class Portfolio(models.Model):
     self.save()
 
   def __str__(self):
-    return "Portfolio : " + str(self.user)
+    return "Portfolio : " + str(self.user) + " " + str(self.portfolio_name)
 
-
+ 
 class StockHolding(models.Model):
   portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
+  portfolio_nameid = models.CharField(max_length=100)
   company_symbol = models.CharField(default='', max_length=25)
   company_name = models.CharField(max_length=100)
   sector = models.CharField(default='', max_length=50)
