@@ -1,1 +1,1 @@
-web gunicorn portfolio_management_system.wsgi:application --log-file --bind
+web: python website/manage.py runserver 0.0.0.0:$PORT
